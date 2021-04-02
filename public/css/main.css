@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    box-sizing: inherit;
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+    padding: 2rem;
+    background: #222831;
+    font-family: sans-serif;
+    color: #eee;
+}
+.header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 5rem;
+    background-color: rgb(62, 158, 196);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: context-menu;
+    z-index: 3;
+}
+.nav{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav__h1{
+    margin: 0;
+    color: white;
+}
+.nav__ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav__li{
+    margin: 0 0.5rem;
+}
+.nav__li--a{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    border: 2px solid white;
+     color: white;
+}
+.nav__li--a:active,
+.nav__li--a:hover{
+    color: rgb(62, 158, 196);
+    background-color: white;
+}
+
+.homeCard{
+    grid-column: span 1;
+    width: 100%;
+    height: 35rem;
+    position: relative;
+    box-shadow: 0 0.5rem 1.5rem #eee;
+    border-radius: 15px;
+}
+.homeCard > a{
+    text-decoration: none;
+}
+.homeCard__article{
+    width: 100%;
+    height: 100%;
+}
+.homeCard__article--header{
+    width: 100%;
+    height: 15%;
+    background-color: rgb(62, 158, 196);
+    border-radius: 15px 15px 0 0;
+}
+.homeCard__article--heading{
+    padding: 1rem;
+    text-align: center;
+    color: #eee;
+}
+.homeCard__article--figure{
+    width: 100%;
+    height: 70%;
+}
+.homeCard__article--image{
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+.homeCard__article--sectionBtn{
+    width: 100%;
+    height: 15%;
+}
+.homeCard__article--button{
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 15px 15px;
+    background-color: #4E4E50;
+    border: none;
+    color: #eee;
+}
+.homeCard__article--button:focus{
+    outline: 0;
+}
+
+.u-list-style-none{
+    list-style: none;
+}

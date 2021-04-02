@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/home', [\App\Http\Controllers\HuisdierController::class, 'header']);
+Route::get('/home', [\App\Http\Controllers\HuisdierController::class, 'index']);
+Route::get('/home/{huisdier_id}', [\App\Http\Controllers\HuisdierController::class, 'show']);
+
 Route::get('/', function () {
     return view('welcome');
 });

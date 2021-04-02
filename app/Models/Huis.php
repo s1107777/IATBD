@@ -10,6 +10,6 @@ class Huis extends Model
     protected $table = 'huis';
 
     public function huis(){
-        return $this->belongsTo('\App\Moels\UserOppas', 'userOppas_id','userOppas_id')
+        return $this->belongsTo('\App\Models\UserOppas', 'userOppas_id','userOppas_id')
     }
 }

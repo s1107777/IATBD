@@ -19,11 +19,12 @@ class HuisdierTableSeeder extends Seeder
             'huisdier_id' => '1',
             'naam' => 'Eevee',
             'soort'=> 'konijn',
-            'foto' => '/image/default.jpg',
+            'foto' => '/image/eevee.jpeg',
             'leeftijd'=> 4,
             'begin_dag' => '2021-04-30',
             'aantal_dagen' => 3,
             'uurtarief' => 10.50,
+            'plaatsnaam' => 'Lisse',
         ]);
     }
 }
