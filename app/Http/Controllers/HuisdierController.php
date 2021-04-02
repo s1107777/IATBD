@@ -6,9 +6,6 @@ use Illuminate\Http\Request;
 
 class HuisdierController extends Controller
 {
-    // public function header(){
-    //     return view('header.header');
-    // }
     public function index(){
         return view('homepage.index', [
             'huisdieren' => \App\Models\Huisdier::all()

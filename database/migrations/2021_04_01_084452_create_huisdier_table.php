@@ -23,7 +23,7 @@ class CreateHuisdierTable extends Migration
             $table->integer('leeftijd');
             $table->date('begin_dag');
             $table->integer('aantal_dagen');
-            $table->double('uurtarief', 4,2);
+            $table->double('dagtarief', 4,2);
             $table->string('plaatsnaam');
         });
     }

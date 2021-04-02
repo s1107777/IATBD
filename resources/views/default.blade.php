@@ -9,7 +9,19 @@
     <title>PassenOpJeDier</title>
 </head>
 <body>
-    <!-- @include('header.header') -->
+    <header class="header">
+        <nav class="nav">
+            <h1 class="nav__h1">PassenOpJeDier</h1>
+            <ul class="nav__ul">
+                <li class="nav__li">
+                    <a class="nav__li--a" href="/home">Home</a>
+                </li>
+                <li class="nav__li">
+                    <a class="nav__li--a" >Uitloggen</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
     @yield('content')
 </body>
 </html>

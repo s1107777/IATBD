@@ -9,7 +9,6 @@ html{
 }
 body{
     font-size: 1.6rem;
-    padding: 2rem;
     background: #222831;
     font-family: sans-serif;
     color: #eee;
@@ -36,6 +35,7 @@ body{
 .nav__h1{
     margin: 0;
     color: white;
+    font-size: 1.5rem;
 }
 .nav__ul{
     list-style: none;
@@ -49,13 +49,21 @@ body{
     margin: 0 0.5rem;
 }
 .nav__li--a{
-    text-decoration: none;
+    /* text-decoration: none;
     color: white;
     display: inline-block;
     padding: 0.75rem 1.5rem;
     border-radius: 10px;
     border: 2px solid white;
-     color: white;
+    color: white; */
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    border: 2px solid white;
+    color: white;
+    font-size: 1rem;
 }
 .nav__li--a:active,
 .nav__li--a:hover{
@@ -114,6 +122,63 @@ body{
     outline: 0;
 }
 
+.huisdier{
+    padding: 6rem 2rem 2rem 2rem;
+    width: 100%;
+    height: 100%;
+}
+.huisdier__header{
+    width: 100%;
+    height: 15%;
+    margin-bottom: 1rem;
+}
+.huisdier__heading{
+    text-align: center;
+}
+/* .huisdier__figure{
+    width: 100%;
+    height: 30%;
+} */
+.huisdier__img{
+    width: 60%;
+    height: 100%;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+.huisdier__sectionInfo{
+    width: 100%;
+    height: 20rem;
+    box-shadow: 0 0.5rem 1.5rem #eee;
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+.huisdier__button{
+    width: 60%;
+    height: 4rem;
+    display: block;
+    margin: 0 auto;
+    border-radius: 15px;
+    border: none;
+    color: #eee;
+    background-color: rgb(62, 158, 196);
+    box-shadow: 0 0.5rem 0.5rem #eee;
+}
+.huisdier__button:active{
+    transform: translateY(4px);
+    box-shadow: 0 0rem 0rem #eee;
+}
+.huisdier__button:focus{
+    outline: 0;
+}
+
+/* u classes */
+.u-ul-padding{
+    padding: 6rem 2rem 2rem 2rem;
+}
 .u-list-style-none{
     list-style: none;
+    margin-bottom: 3rem;
 }
