@@ -39,5 +39,31 @@ class HuisdierTableSeeder extends Seeder
             'dagtarief' => 12.75,
             'plaatsnaam' => 'Lisserbroek',
         ]);
+
+        DB::table('huisdier')->insert([
+            'user_id'=> '1',
+            'huisdier_id' => '3',
+            'naam' => 'Floortje',
+            'soort'=> 'hond',
+            'foto' => '/image/Floortje.jpg',
+            'leeftijd'=> 3,
+            'begin_dag' => '2021-04-26',
+            'aantal_dagen' => 2,
+            'dagtarief' => 9.00,
+            'plaatsnaam' => 'Lisse',
+        ]);
+
+        DB::table('huisdier')->insert([
+            'user_id'=> '1',
+            'huisdier_id' => '4',
+            'naam' => 'Riley',
+            'soort'=> 'hond',
+            'foto' => '/image/riley.jpg',
+            'leeftijd'=> 7,
+            'begin_dag' => '2021-05-02',
+            'aantal_dagen' => 5,
+            'dagtarief' => 11.00,
+            'plaatsnaam' => 'Lisserbroek',
+        ]);
     }
 }

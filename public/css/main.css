@@ -105,12 +105,13 @@ body{
     width: 100%;
     max-height: 100%;
     object-fit: cover;
+    object-position: center top;
 }
-.homeCard__article--sectionBtn{
+.homeCard__article--section{
     width: 100%;
     height: 15%;
 }
-.homeCard__article--button{
+.homeCard__article--div{
     width: 100%;
     height: 100%;
     border-radius: 0 0 15px 15px;
@@ -118,7 +119,7 @@ body{
     border: none;
     color: #eee;
 }
-.homeCard__article--button:focus{
+.homeCard__article--div:active{
     outline: 0;
 }
 
@@ -149,7 +150,8 @@ body{
 }
 .huisdier__sectionInfo{
     width: 100%;
-    height: 20rem;
+    height: 18
+    rem;
     box-shadow: 0 0.5rem 1.5rem #eee;
     border-radius: 15px;
     padding: 1.5rem;
@@ -174,11 +176,160 @@ body{
     outline: 0;
 }
 
+.filter-section{
+    margin: 7rem auto 0 auto;
+    padding: 2rem 1rem;
+    width: 90vw;
+    color: #eee;
+    border-radius: 15px;
+    background-color: #4E4E50;
+    display: grid;
+    box-shadow: 0 0.5rem 0.5rem #eee;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    text-align: center;
+    height: 6rem;
+}
+
 /* u classes */
 .u-ul-padding{
-    padding: 6rem 2rem 2rem 2rem;
+    padding: 3rem 2rem 2rem 2rem;
 }
 .u-list-style-none{
     list-style: none;
     margin-bottom: 3rem;
 }
+
+@media(min-width: 450px){
+    .homeCard{
+        height: 40rem;
+    }
+    .huisdier__img{
+        width: 50%;
+    }
+    .huisdier__sectionInfo{
+        height: 16rem;
+    }
+    .huisdier__button{
+        width: 50%;
+    }
+}
+@media(min-width: 550px){
+    .header{
+        height: 6rem;
+    }
+    .nav__h1{
+        font-size: 1.8rem;
+    }
+    .nav__li--a{
+        padding: 0.8rem 1.3rem;
+        font-size: 1.3rem;
+    }
+    .filter-section{
+        width: 50vw;
+    }
+    .homeCard{
+        height: 34rem;
+    }
+    .huisdier{
+        padding: 7rem 2rem 2rem 2rem;
+    }
+    .huisdier__img{
+        width: 40%;
+    }
+    .huisdier__sectionInfo{
+        width: 75%;
+        margin: 0 auto 2rem auto;
+    }
+    .huisdier__button{
+        width: 40%;
+    }
+    .u-ul-grid{
+        display: grid;
+        grid-template-columns: repeat(2,minmax(0,1fr));
+        gap: 2rem;
+    }
+    /* .u-ul-padding{
+        padding: 16rem 2rem 2rem 2rem;
+    } */
+}
+@media(min-width: 750px){
+    .filter-section{
+        width: 30vw;
+    }
+    .homeCard{
+        height: 31rem;
+    }
+    .homeCard__article--div{
+        font-size: 1.5rem;
+    }
+    .huisdier__heading{
+        font-size: 4rem;
+    }
+    .huisdier__img{
+        width: 30%;
+    }
+    .huisdier__sectionInfo{
+        width: 60%;
+    }
+    .huisdier__button{
+        font-size: 1.8rem;
+        width: 30%;
+    }
+    .u-ul-grid{
+        grid-template-columns: repeat(3,minmax(0,1fr));
+    }
+}
+@media(min-width: 1000px){
+    .nav__h1{
+        font-size: 2.4rem;
+    }
+    .nav__li--a{
+        padding: 1rem 1.5rem;
+        font-size: 1.5rem;
+    } 
+    .filter-section{
+        width: 47vw;
+    }
+    .filter-section__label{
+        font-size: 125%;
+    }
+    .homeCard{
+        height: 30rem;
+    }
+    .homeCard__article--div{
+        font-size: 1.7rem;
+    }
+    .huisdier__img{
+        width: 25%;
+    }
+    .huisdier__sectionInfo{
+        font-size: 1.8rem;
+    }
+    .huisdier__button{
+        width: 25%;
+    }
+    .u-ul-grid{
+        grid-template-columns: repeat(4,minmax(0,1fr));
+        gap: 3rem;
+    }
+    /* .u-ul-padding{
+        padding: 9rem 2rem 2rem 2rem;
+    } */
+}
+@media(min-width: 1250px){
+    .homeCard{
+        height: 40rem;
+    }
+    .homeCard__article--heading{
+        padding: 1.7rem;
+    }
+    .huisdier__img{
+        width: 20%;
+    }
+    .huisdier__sectionInfo{
+        width: 50%;
+    }
+    .huisdier__button{
+        width: 20%;
+    }
+}   

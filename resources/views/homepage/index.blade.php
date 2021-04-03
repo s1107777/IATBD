@@ -1,6 +1,7 @@
 @extends('default')
 @section('content')
-    <ul class="u-ul-padding">
+@include('homepage.components.checkbox--index')
+    <ul class="u-ul-padding u-ul-grid">
         @foreach($huisdieren as $huisdier)
             @include('homepage.components.homeCard--index')
         @endforeach

@@ -1,4 +1,4 @@
-<li class="u-list-style-none homeCard">
+<li class="u-list-style-none homeCard" data-soort-huisdier={{$huisdier->soort}}>
     <a href="/home/{{$huisdier->huisdier_id}}">
         <article class="homeCard__article">
             <header class="homeCard__article--header">
@@ -7,8 +7,8 @@
             <figure class="homeCard__article--figure">
                 <img class="homeCard__article--image" src="{{$huisdier->foto}}" alt="">
             </figure>
-            <section class="homeCard__article--sectionBtn">
-                <button class="homeCard__article--button">Meer informatie</button>
+            <section class="homeCard__article--section">
+                <button class="homeCard__article--div">Meer informatie</button>
             </section>
         </article>
     </a>
