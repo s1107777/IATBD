@@ -16,9 +16,22 @@
                 <li class="nav__li">
                     <a class="nav__li--a" href="/home">Home</a>
                 </li>
-                <li class="nav__li">
-                    <a class="nav__li--a" >Uitloggen</a>
+                @if(!Auth::check())
+                    <li class="nav__li">
+                        <a class="nav__li--a" href="/home/create">Oppassen</a>
+                    </li>
+                    <li class="nav__li">
+                        <a class="nav__li--a" href="/dashboard">Inloggen</a>
+                    </li>
+                @endif
+                @if(Auth::check())
+                    <li class="nav__li">
+                        <a class="nav__li--a" href="/home/create">Berichten</a>
+                    </li>
+                    <li class="nav__li">
+                    <a class="nav__li--a" href="/dashboard">Uitloggen</a>
                 </li>
+                @endif
             </ul>
         </nav>
     </header>

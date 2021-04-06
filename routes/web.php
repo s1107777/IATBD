@@ -13,9 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::middleware(['auth', 'admin'])->group(function() {
+
+// });
 Route::get('/home', [\App\Http\Controllers\HuisdierController::class, 'index']);
+Route::get('/home/create', [\App\Http\Controllers\HuisdierController::class, 'create']);
+Route::post('/home', [\App\Http\Controllers\HuisdierController::class, 'store']);
 Route::get('/home/{huisdier_id}', [\App\Http\Controllers\HuisdierController::class, 'show']);
 
-Route::get('/', function () {
-    return view('welcome');
+Route::middleware(['auth'])->group(function() {
+    Route::get('/aanvraag', [\App\Http\Controllers\AanvraagController::class, 'index');
 });
+
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
