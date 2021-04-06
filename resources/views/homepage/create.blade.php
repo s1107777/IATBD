@@ -1,7 +1,7 @@
 @extends('default')
 @section('content')
 <article class="create-form">
-    <form class="create-form__form" action="/home" method="post">
+    <form class="create-form__form card" action="/home" method="post">
         @csrf
         <section class="create-form__section">
             <label for="naam">Naam</label>

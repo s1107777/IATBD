@@ -26,7 +26,7 @@
                 @endif
                 @if(Auth::check())
                     <li class="nav__li">
-                        <a class="nav__li--a" href="/home/create">Berichten</a>
+                        <a class="nav__li--a" href="/aanvraag">Berichten</a>
                     </li>
                     <li class="nav__li">
                     <a class="nav__li--a" href="/dashboard">Uitloggen</a>

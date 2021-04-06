@@ -21,10 +21,8 @@ Route::get('/home/create', [\App\Http\Controllers\HuisdierController::class, 'cr
 Route::post('/home', [\App\Http\Controllers\HuisdierController::class, 'store']);
 Route::get('/home/{huisdier_id}', [\App\Http\Controllers\HuisdierController::class, 'show']);
 
-Route::middleware(['auth'])->group(function() {
-    Route::get('/aanvraag', [\App\Http\Controllers\AanvraagController::class, 'index');
-});
-
+Route::get('/aanvraag', [\App\Http\Controllers\AanvraagController::class, 'index'])->middleware(['auth', 'admin']);
+Route::get('/aanvraag/{aanvraag_id}', [\App\Http\Controllers\AanvraagController::class, 'show'])->middleware(['auth', 'admin']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

@@ -17,7 +17,14 @@ class AanvraagTableSeeder extends Seeder
             'aanvraag_id'=> '1',
             'naam' => 'Marcel',
             'naamDier' => 'Lion',
-            'vraag'=> 'test test test',
+            'vraag'=> 'Ik ben geïnteresseerd om op uw huisdier Lion op te passen voor de gewilde datum.',
+        ]);
+
+        DB::table('aanvraag')->insert([
+            'aanvraag_id'=> '2',
+            'naam' => 'Marcel de Jong',
+            'naamDier' => 'Riley',
+            'vraag'=> 'Ik heb een vraag! Is het een speelse hond of is Riley rustig?',
         ]);
     }
 }

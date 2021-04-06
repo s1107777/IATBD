@@ -1,4 +1,4 @@
-<li class="u-list-style-none homeCard" data-soort-huisdier={{$huisdier->soort}}>
+<li class="u-list-style-none homeCard card" data-soort-huisdier={{$huisdier->soort}}>
     <a href="/home/{{$huisdier->huisdier_id}}">
         <article class="homeCard__article">
             <header class="homeCard__article--header">

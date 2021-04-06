@@ -1,4 +1,4 @@
-<article class="filter">
+<article class="filter card">
     <section>
         <label class="filter__label" for="konijn">Konijn</label>
         <input type="checkbox" name="konijn" id="konijn">
