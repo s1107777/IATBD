@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             UserTableSeeder::class,
             HuisdierTableSeeder::class,
             AanvraagTableSeeder::class,
+            ReviewSeederTable::class,
         ]);
     }
 }

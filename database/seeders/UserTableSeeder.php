@@ -22,5 +22,14 @@ class UserTableSeeder extends Seeder
             'password' => bcrypt('damion'),
             'role'=> 'Admin',
         ]);
+
+        DB::table('users')->insert([
+            'user_id'=> '2',
+            'naam'=> 'Marcel de Jong',
+            'leeftijd'=> 34,
+            'email'=> 'mdejong@hotmail.nl',
+            'password' => bcrypt('damion'),
+            'role'=> 'Gebruiker',
+        ]);
     }
 }

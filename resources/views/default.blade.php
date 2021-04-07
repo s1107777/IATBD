@@ -16,15 +16,15 @@
                 <li class="nav__li">
                     <a class="nav__li--a" href="/home">Home</a>
                 </li>
-                @if(!Auth::check())
+                @if(Auth::check() && Auth::user()->role == 'Gebruiker')
                     <li class="nav__li">
                         <a class="nav__li--a" href="/home/create">Oppassen</a>
                     </li>
                     <li class="nav__li">
-                        <a class="nav__li--a" href="/dashboard">Inloggen</a>
+                        <a class="nav__li--a" href="/dashboard">Uitloggen</a>
                     </li>
                 @endif
-                @if(Auth::check())
+                @if(Auth::check() && Auth::user()->role == 'Admin')
                     <li class="nav__li">
                         <a class="nav__li--a" href="/aanvraag">Berichten</a>
                     </li>

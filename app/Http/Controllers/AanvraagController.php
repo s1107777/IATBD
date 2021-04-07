@@ -16,4 +16,13 @@ class AanvraagController extends Controller
             'aanvraag' => \App\Models\Aanvraag::find($aanvraag_id)
         ]); 
     }
+    public function destroy($aanvraag_id){
+        \App\Models\Aanvraag::destroy($aanvraag_id);
+        return redirect('/aanvraag');
+    }
+    // public function update(\App\Models\User $user){
+    //     $user = DB::select('update users set blocked_until = NOW() WHERE user_id = 2');
+    //     $user->save();
+    //     return redirect('/home');
+    // }
 }

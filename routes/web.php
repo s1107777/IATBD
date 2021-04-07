@@ -13,17 +13,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::middleware(['auth', 'admin'])->group(function() {
+Route::middleware(['auth'])->group(function() {
+    Route::get('/home', [\App\Http\Controllers\HuisdierController::class, 'index']);
+    Route::get('/home/create', [\App\Http\Controllers\HuisdierController::class, 'create']);
+    Route::post('/home', [\App\Http\Controllers\HuisdierController::class, 'store']);
+    Route::get('/home/{huisdier_id}', [\App\Http\Controllers\HuisdierController::class, 'show']);
+});
 
-// });
-Route::get('/home', [\App\Http\Controllers\HuisdierController::class, 'index']);
-Route::get('/home/create', [\App\Http\Controllers\HuisdierController::class, 'create']);
-Route::post('/home', [\App\Http\Controllers\HuisdierController::class, 'store']);
-Route::get('/home/{huisdier_id}', [\App\Http\Controllers\HuisdierController::class, 'show']);
 
-Route::get('/aanvraag', [\App\Http\Controllers\AanvraagController::class, 'index'])->middleware(['auth', 'admin']);
-Route::get('/aanvraag/{aanvraag_id}', [\App\Http\Controllers\AanvraagController::class, 'show'])->middleware(['auth', 'admin']);
-
+Route::middleware(['auth', 'admin'])->group(function() {
+    Route::get('/aanvraag', [\App\Http\Controllers\AanvraagController::class, 'index']);
+    Route::get('/aanvraag/{aanvraag_id}', [\App\Http\Controllers\AanvraagController::class, 'show']);
+    // Route::post('/login', [\App\Http\Controllers\AanvraagController::class, 'update']);
+    Route::get('/aanvraag/{aanvraag_id}/delete', [\App\Http\Controllers\AanvraagController::class, 'destroy']);
+    Route::get('/review', [\App\Http\Controllers\ReviewController::class, 'index']);
+    Route::get('/review/create', [\App\Http\Controllers\ReviewController::class, 'create']);
+    Route::post('/review', [\App\Http\Controllers\ReviewController::class, 'store']);
+});
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
