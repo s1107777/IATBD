@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Aanvraag extends Model
 {
     protected $table = 'aanvraag';
+    protected $primaryKey = 'aanvraag_id';
     public $timestamps = false;
 
     public function aanvraag(){

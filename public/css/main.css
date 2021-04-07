@@ -215,6 +215,7 @@ body{
 }
 .aanvraagCard{
     margin-bottom: 3rem;
+    grid-column: span 1;
 }
 .aanvraagCard > a{
     text-decoration: none;
@@ -298,10 +299,16 @@ body{
     .create-from__form--button{
         width: 40%;
     }
+    .aanvraagCard{
+        margin-bottom: 0rem;
+    }
+    .aanvraagCard__article{
+        height: 15rem;
+    }
     .u-ul-grid{
         display: grid;
         grid-template-columns: repeat(2,minmax(0,1fr));
-        gap: 2rem;
+        gap: 2.5rem;
     }
     /* .u-ul-padding{
         padding: 16rem 2rem 2rem 2rem;
