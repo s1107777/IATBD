@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 class AanvraagController extends Controller
 {
@@ -20,9 +21,16 @@ class AanvraagController extends Controller
         \App\Models\Aanvraag::destroy($aanvraag_id);
         return redirect('/aanvraag');
     }
-    // public function update(\App\Models\User $user){
-    //     $user = DB::select('update users set blocked_until = NOW() WHERE user_id = 2');
-    //     $user->save();
-    //     return redirect('/home');
-    // }
+    public function update($id){
+        $user = \App\Models\User::find($id);
+        $user->blocked = true;
+        
+        try{
+            $user->save();
+            return redirect('/home');
+        }
+        catch(Exception $e){
+            return redirect('/home/create');
+        }
+    }
 }

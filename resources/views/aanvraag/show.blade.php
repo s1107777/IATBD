@@ -21,10 +21,11 @@
                 {{csrf_field()}}
                 <button class="aanvraagCard__sectionBtn--btn" >Verwijderen</button>
             </form>
-            <!-- <form class="aanvraagCard__form-3" action="/login" method="post">
+    
+            <form class="aanvraagCard__form-3" action="/admin/{{$aanvraag->user_id}}" method="post">
                 {{csrf_field()}}
-                <button class="aanvraagCard__sectionBtn--btn">Blokkeren</button>
-            </form> -->
+                <input type="submit"value="Blokkeren" class="aanvraagCard__sectionBtn--btn"></input>
+            </form>
         </section>
         
     </article>

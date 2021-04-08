@@ -16,7 +16,7 @@ class HuisTableSeeder extends Seeder
     {
         DB::table('huis')->insert([
             'huis_id'=> '1',
-            'userOppas_id' => '1',
+            'user_id' => '2',
             'straatnaam'=> 'Forsythiastraat',
             'huisnummer'=> 35,
             'postcode'=> '2165 CG',

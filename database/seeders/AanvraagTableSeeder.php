@@ -15,6 +15,7 @@ class AanvraagTableSeeder extends Seeder
     {
         DB::table('aanvraag')->insert([
             'aanvraag_id'=> '1',
+            'user_id' => '2',
             'naam' => 'Marcel',
             'naamDier' => 'Lion',
             'vraag'=> 'Ik ben geïnteresseerd om op uw huisdier Lion op te passen voor de gewilde datum.',
@@ -22,6 +23,7 @@ class AanvraagTableSeeder extends Seeder
 
         DB::table('aanvraag')->insert([
             'aanvraag_id'=> '2',
+            'user_id' => '2',
             'naam' => 'Marcel de Jong',
             'naamDier' => 'Riley',
             'vraag'=> 'Ik heb een vraag! Is het een speelse hond of is Riley rustig?',

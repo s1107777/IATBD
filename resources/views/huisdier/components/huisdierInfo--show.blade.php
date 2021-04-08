@@ -12,4 +12,5 @@
         <p>Het dagtarief is €{{$huisdier->dagtarief}}</p>
         <p>Vind je het leuk om op mijn lieve {{$huisdier->soort}} te passen? Aarzel dan niet en reageer!</p>
     </section>
+    <a class="huisdier__button" href="/home/create">Reageren</a>
 </article>

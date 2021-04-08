@@ -16,11 +16,12 @@ class DatabaseSeeder extends Seeder
         $this->call([
             RoleTableSeeder::class,
             UserOppasTableSeeder::class,
-            HuisTableSeeder::class,
             UserTableSeeder::class,
+            HuisTableSeeder::class,
             HuisdierTableSeeder::class,
             AanvraagTableSeeder::class,
             ReviewSeederTable::class,
+            ImageTableSeeder::class,
         ]);
     }
 }

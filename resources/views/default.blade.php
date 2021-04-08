@@ -18,7 +18,7 @@
                 </li>
                 @if(Auth::check() && Auth::user()->role == 'Gebruiker')
                     <li class="nav__li">
-                        <a class="nav__li--a" href="/home/create">Oppassen</a>
+                        <a class="nav__li--a" href="/profiel">Profiel</a>
                     </li>
                     <li class="nav__li">
                         <a class="nav__li--a" href="/dashboard">Uitloggen</a>

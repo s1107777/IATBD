@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateHuisTable extends Migration
+class AddForeignKeyToAanvraagTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,9 @@ class CreateHuisTable extends Migration
      */
     public function up()
     {
-        Schema::create('huis', function (Blueprint $table) {
-            $table->id('huis_id');
+        Schema::table('aanvraag', function (Blueprint $table) {
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('user_id')->on('users');
-            $table->string('straatnaam');
-            $table->integer('huisnummer');
-            $table->string('postcode');
-            $table->string('woonplaats');
-            $table->string('image');
         });
     }
 
@@ -32,9 +26,11 @@ class CreateHuisTable extends Migration
      */
     public function down()
     {
-        Schema::table('huis', function (Blueprint $table) {
-            $table->dropForeign('huis_user_id_foreign');
+        Schema::table('aanvraag', function (Blueprint $table) {
+            $table->dropForeign('aanvraag_user_id_foreign');
         });
-        Schema::dropIfExists('huis');
+        Schema::table('aanvraag', function (Blueprint $table) {
+            //
+        });
     }
 }

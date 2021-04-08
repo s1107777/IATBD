@@ -12,24 +12,26 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::middleware(['auth'])->group(function() {
+Route::middleware(['auth', 'blocked'])->group(function() {
     Route::get('/home', [\App\Http\Controllers\HuisdierController::class, 'index']);
     Route::get('/home/create', [\App\Http\Controllers\HuisdierController::class, 'create']);
     Route::post('/home', [\App\Http\Controllers\HuisdierController::class, 'store']);
     Route::get('/home/{huisdier_id}', [\App\Http\Controllers\HuisdierController::class, 'show']);
-});
+    Route::get('/profiel', [\App\Http\Controllers\HuisController::class, 'index']);
+    Route::get('/fotos/{huis_id}', [\App\Http\Controllers\HuisController::class, 'show']);
 
+});
 
 Route::middleware(['auth', 'admin'])->group(function() {
     Route::get('/aanvraag', [\App\Http\Controllers\AanvraagController::class, 'index']);
     Route::get('/aanvraag/{aanvraag_id}', [\App\Http\Controllers\AanvraagController::class, 'show']);
-    // Route::post('/login', [\App\Http\Controllers\AanvraagController::class, 'update']);
+    Route::post('/admin/{id}', [\App\Http\Controllers\AanvraagController::class, 'update']);
     Route::get('/aanvraag/{aanvraag_id}/delete', [\App\Http\Controllers\AanvraagController::class, 'destroy']);
     Route::get('/review', [\App\Http\Controllers\ReviewController::class, 'index']);
     Route::get('/review/create', [\App\Http\Controllers\ReviewController::class, 'create']);
     Route::post('/review', [\App\Http\Controllers\ReviewController::class, 'store']);
 });
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

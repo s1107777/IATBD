@@ -28,6 +28,7 @@ class HuisdierController extends Controller
         $aanvraag->naam = $request->input('naam');
         $aanvraag->naamDier = $request->input('huisdierNaam');
         $aanvraag->vraag = $request->input('vraag');
+        $aanvraag->user_id = 2;
         
         try{
             $aanvraag->save();

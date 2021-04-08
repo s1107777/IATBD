@@ -21,6 +21,7 @@ class UserTableSeeder extends Seeder
             'email'=> 'damion@hotmail.nl',
             'password' => bcrypt('damion'),
             'role'=> 'Admin',
+            'blocked' => false,
         ]);
 
         DB::table('users')->insert([
@@ -30,6 +31,7 @@ class UserTableSeeder extends Seeder
             'email'=> 'mdejong@hotmail.nl',
             'password' => bcrypt('damion'),
             'role'=> 'Gebruiker',
+            'blocked' => false,
         ]);
     }
 }
