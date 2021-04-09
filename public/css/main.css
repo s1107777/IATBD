@@ -114,7 +114,7 @@ body{
     height: 15%;
     
 }
-.homeCard__article--div{
+.homeCard__article--section-btn{
     width: 100%;
     height: 100%;
     border-radius: 0 0 15px 15px;
@@ -123,7 +123,7 @@ body{
     color: #eee;
     cursor: pointer;
 }
-.homeCard__article--div:active{
+.homeCard__article--section-btn:active{
     outline: 0;
 }
 
@@ -271,7 +271,7 @@ body{
     font-size: 100%;
     width: 100%;
 }
-.create-form__input{
+.create-form__section--input{
     display: block;
     width: 100%;
     font-size: 100%;
@@ -504,7 +504,7 @@ body{
     .homeCard{
         height: 31rem;
     }
-    .homeCard__article--div{
+    .homeCard__article--section-btn{
         font-size: 1.5rem;
     }
     .huisdier__heading{
@@ -576,7 +576,7 @@ body{
     .homeCard{
         height: 30rem;
     }
-    .homeCard__article--div{
+    .homeCard__article--section-btn{
         font-size: 1.7rem;
     }
     .huisdier__img, .profielHuis__img{
@@ -645,6 +645,9 @@ body{
     .huisdier__button{
         width: 20%;
     }
+    .profielHuis{
+        padding: 9rem 2rem 2rem 2rem;
+    }
     .profielHuis__section{
         width: 40%;
     }
@@ -654,10 +657,17 @@ body{
     .profielHuis__sectionBtn--button, .profielHuis__Section--div{
         font-size: 120%;
     }
-    .create-form__label{
+    .create-form__section--label{
         font-size: 120%;
     }
     .uploadSection{
         width: 30%;
     }
+    .filter{
+        margin: 9rem auto 0 auto;
+    }
+    .u-ul-padding-7{
+        padding: 9rem 2rem 2rem 2rem;
+    }
+    
 }   

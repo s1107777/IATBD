@@ -19,7 +19,10 @@ class CreateHuisdierTable extends Migration
             $table->foreign('user_id')->references('user_id')->on('users');
             $table->string('naam');
             $table->string('soort');
-            $table->string('foto');
+            $table->string('foto640');
+            $table->string('foto1280');
+            $table->string('foto1920');
+
             $table->integer('leeftijd');
             $table->date('begin_dag');
             $table->integer('aantal_dagen');
