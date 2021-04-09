@@ -14,8 +14,8 @@ class AddColumnsToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->integer('leeftijd');
-            $table->string('role');
+            $table->integer('leeftijd')->default('20');
+            $table->string('role')->default('Gebruiker');
             $table->foreign('role')->references('role')->on('roles');
         });
     }
