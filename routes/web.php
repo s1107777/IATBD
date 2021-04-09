@@ -18,7 +18,9 @@ Route::middleware(['auth', 'blocked'])->group(function() {
     Route::post('/home', [\App\Http\Controllers\HuisdierController::class, 'store']);
     Route::get('/home/{huisdier_id}', [\App\Http\Controllers\HuisdierController::class, 'show']);
     Route::get('/profiel', [\App\Http\Controllers\HuisController::class, 'index']);
+    Route::get('/fotos/upload', [\App\Http\Controllers\HuisController::class, 'create']);
     Route::get('/fotos/{huis_id}', [\App\Http\Controllers\HuisController::class, 'show']);
+    Route::post('/upload', [\App\Http\Controllers\HuisController::class, 'store']);
 
 });
 

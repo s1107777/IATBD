@@ -195,6 +195,57 @@ body{
     justify-content: center;
     line-height: 4rem;
 }
+.profielHuis__sectionBtnAdmin{
+    display: grid;
+    grid-template-columns: auto;
+}
+.profielHuis__sectionBtn--buttonAdmin{
+    text-decoration: none;
+    color: #eee;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(62, 158, 196);
+    box-shadow: 0 0.5rem 0.5rem #eee;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    line-height: 4rem;
+}
+.uploadSection{
+    height: 20rem;
+}
+.uploadSection__header{
+    background: rgb(62, 158, 196);
+    padding: 1rem;
+    border-radius: 15px 15px 0 0;
+}
+.uploadSection__heading{
+    font-size: 2rem;
+}
+.uploadSection_form{
+    padding: 1rem;
+}
+.uploadSection__form--label{
+    display: block;
+}
+.uploadSection__form--input{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+.uploadSection__form--button{
+    color: #eee;
+    margin: 0 auto;
+    width: 50%;
+    height: 4rem;
+    background-color: rgb(62, 158, 196);
+    box-shadow: 0 0.5rem 0.5rem #eee;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    line-height: 4rem;
+    font-size: 100%;
+}
 .filter{
     margin: 7rem auto 0 auto;
     padding: 2rem 1rem;
@@ -212,7 +263,7 @@ body{
 }
 .create-form__form{
     width: 100%;
-    max-height: 40rem;
+    max-height: 45rem;
     padding: 2rem;
 }
 .create-form__section{
@@ -286,19 +337,21 @@ body{
     width: 100%;
     height: 100%;
 }
-.aanvraagCard__form-3{
+/* .aanvraagCard__form-3{
     grid-column: span 2;
-}
+} */
 
 .aanvraagCard__sectionBtn--btn:active,
 .huisdier__button:active,
-.profielHuis__sectionBtn--button:active{
+.profielHuis__sectionBtn--button:active,
+.profielHuis__sectionBtn--buttonAdmin:active{
     transform: translateY(4px);
     box-shadow: 0 0rem 0rem #eee;
 }
 .aanvraagCard__sectionBtn--btn:focus,
 .huisdier__button:focus,
-.profielHuis__sectionBtn--button:focus{
+.profielHuis__sectionBtn--button:focus,
+.profielHuis__sectionBtn--buttonAdmin:focus{
     outline: 0;
 }
 .fotoHuis{
@@ -348,6 +401,9 @@ body{
     .profielHuis{
         padding: 8rem 2rem 2rem 2rem;
     }
+    .profielHuis__sectionBtn--buttonAdmin{
+        width: 60%;
+    }
     .create-from__form--button{
         width: 50%;
     }
@@ -357,6 +413,10 @@ body{
     }
     .fotoHuis{
         grid-template-columns: auto auto;
+    }
+    .uploadSection{
+        width: 80%;
+        margin: 0 auto;
     }
     .u-div-width{
         width: 70%;
@@ -408,11 +468,17 @@ body{
         width: 40%;
         font-size: 1.6rem;
     }
+    .profielHuis__sectionBtn--buttonAdmin{
+        width: 40%;
+    }
     .aanvraagCard{
         margin-bottom: 0rem;
     }
     .aanvraagCard__article{
         height: 15rem;
+    }
+    .uploadSection{
+        width: 60%;
     }
     .u-ul-padding-7{
         padding: 8rem 2rem 2rem 2rem;
@@ -425,6 +491,11 @@ body{
     /* .u-ul-padding{
         padding: 16rem 2rem 2rem 2rem;
     } */
+}
+@media(min-width:670px){
+    .uploadSection{
+        width: 50%;
+    }
 }
 @media(min-width: 750px){
     .filter{
@@ -451,6 +522,9 @@ body{
     .profielHuis__sectionBtn{
         width: 60%;
     }
+    .profielHuis__sectionBtn--buttonAdmin{
+        width: 30%;
+    }
     .create-form__form{
         width: 60%;
     }
@@ -464,11 +538,25 @@ body{
     .fotoHuis{
         grid-template-columns: auto auto auto;
     }
+    .uploadSection{
+        height: 22rem;
+    }
+    .uploadSection__heading{
+        font-size: 2.2rem;
+    }
+    .uploadSection__form--label{
+        font-size: 110%;
+    }
     .u-div-width{
         width: 50%;
     }
     .u-ul-grid{
         grid-template-columns: repeat(3,minmax(0,1fr));
+    }
+}
+@media(min-width: 830px){
+    .uploadSection{
+        height: 20rem;
     }
 }
 @media(min-width: 1000px){
@@ -504,6 +592,9 @@ body{
     .profielHuis__sectionBtn{
         width: 50%;
     }
+    .profielHuis__sectionBtn--buttonAdmin{
+        width: 20%;
+    }
     .huisdier__button{
         font-size: 130%;
     }
@@ -519,6 +610,10 @@ body{
     }
     .fotoHuis{
         grid-template-columns: auto auto auto auto;
+    }
+    .uploadSection{
+        height: 22rem;
+        width: 40%;
     }
     .u-div-width{
         width: 35%;
@@ -558,5 +653,11 @@ body{
     }
     .profielHuis__sectionBtn--button, .profielHuis__Section--div{
         font-size: 120%;
+    }
+    .create-form__label{
+        font-size: 120%;
+    }
+    .uploadSection{
+        width: 30%;
     }
 }   

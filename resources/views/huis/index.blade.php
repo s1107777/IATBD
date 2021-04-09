@@ -16,10 +16,17 @@
                     <p><b>Woonplaats:</b> {{$huis->woonplaats}}</p>
                 </div>                
             </section>
-            <section class="profielHuis__sectionBtn">
-                <a class="profielHuis__sectionBtn--button" href="/fotos/{{$huis->huis_id}}" type=button>Alle foto's</a>
-                <a class="profielHuis__sectionBtn--button" href="/fotos" type=button >Uploaden</a>
-            </section>
+            @if(Auth::user()->role == 'Gebruiker')
+                <section class="profielHuis__sectionBtn">
+                    <a class="profielHuis__sectionBtn--button" href="/fotos/{{$huis->huis_id}}" type=button>Alle foto's</a>
+                    <a class="profielHuis__sectionBtn--button" href="/fotos/upload" type=button >Uploaden</a>
+                </section>
+            @else
+                <section class="profielHuis__sectionBtnAdmin">
+                    <a class="profielHuis__sectionBtn--buttonAdmin" href="/fotos/{{$huis->huis_id}}" type=button>Alle foto's</a>
+                </section>
+            @endif
+            
         </article>
     @endforeach
 @endsection

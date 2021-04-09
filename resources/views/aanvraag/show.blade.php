@@ -21,8 +21,11 @@
                 {{csrf_field()}}
                 <button class="aanvraagCard__sectionBtn--btn" >Verwijderen</button>
             </form>
-    
-            <form class="aanvraagCard__form-3" action="/admin/{{$aanvraag->user_id}}" method="post">
+            <form action="/profiel" method="get">
+                {{csrf_field()}}
+                <button class="aanvraagCard__sectionBtn--btn">Profiel bekijken</button>
+            </form>
+            <form action="/admin/{{$aanvraag->user_id}}" method="post">
                 {{csrf_field()}}
                 <input type="submit"value="Blokkeren" class="aanvraagCard__sectionBtn--btn"></input>
             </form>
